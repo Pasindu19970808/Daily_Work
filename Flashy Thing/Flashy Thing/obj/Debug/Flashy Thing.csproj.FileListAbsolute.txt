@@ -1,0 +1,10 @@
+C:\Users\ASUS\Desktop\C# code\Head First\Flashy Thing\Flashy Thing\bin\Debug\Flashy Thing.exe.config
+C:\Users\ASUS\Desktop\C# code\Head First\Flashy Thing\Flashy Thing\bin\Debug\Flashy Thing.exe
+C:\Users\ASUS\Desktop\C# code\Head First\Flashy Thing\Flashy Thing\bin\Debug\Flashy Thing.pdb
+C:\Users\ASUS\Desktop\C# code\Head First\Flashy Thing\Flashy Thing\obj\Debug\Flashy Thing.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\C# code\Head First\Flashy Thing\Flashy Thing\obj\Debug\Flashy_Thing.Form1.resources
+C:\Users\ASUS\Desktop\C# code\Head First\Flashy Thing\Flashy Thing\obj\Debug\Flashy_Thing.Properties.Resources.resources
+C:\Users\ASUS\Desktop\C# code\Head First\Flashy Thing\Flashy Thing\obj\Debug\Flashy Thing.csproj.GenerateResource.cache
+C:\Users\ASUS\Desktop\C# code\Head First\Flashy Thing\Flashy Thing\obj\Debug\Flashy Thing.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\C# code\Head First\Flashy Thing\Flashy Thing\obj\Debug\Flashy Thing.exe
+C:\Users\ASUS\Desktop\C# code\Head First\Flashy Thing\Flashy Thing\obj\Debug\Flashy Thing.pdb
