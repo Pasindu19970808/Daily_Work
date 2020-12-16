@@ -1,0 +1,10 @@
+C:\Users\ASUS\Desktop\C# code\Head First\Variables\Variables\bin\Debug\Variables.exe.config
+C:\Users\ASUS\Desktop\C# code\Head First\Variables\Variables\bin\Debug\Variables.exe
+C:\Users\ASUS\Desktop\C# code\Head First\Variables\Variables\bin\Debug\Variables.pdb
+C:\Users\ASUS\Desktop\C# code\Head First\Variables\Variables\obj\Debug\Variables.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\C# code\Head First\Variables\Variables\obj\Debug\Variables.Form1.resources
+C:\Users\ASUS\Desktop\C# code\Head First\Variables\Variables\obj\Debug\Variables.Properties.Resources.resources
+C:\Users\ASUS\Desktop\C# code\Head First\Variables\Variables\obj\Debug\Variables.csproj.GenerateResource.cache
+C:\Users\ASUS\Desktop\C# code\Head First\Variables\Variables\obj\Debug\Variables.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\C# code\Head First\Variables\Variables\obj\Debug\Variables.exe
+C:\Users\ASUS\Desktop\C# code\Head First\Variables\Variables\obj\Debug\Variables.pdb
