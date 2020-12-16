@@ -1,0 +1,10 @@
+C:\Users\ASUS\Desktop\C# code\Head First\Chapter2  if-else\Chapter2  if-else\bin\Debug\Chapter2  if-else.exe.config
+C:\Users\ASUS\Desktop\C# code\Head First\Chapter2  if-else\Chapter2  if-else\bin\Debug\Chapter2  if-else.exe
+C:\Users\ASUS\Desktop\C# code\Head First\Chapter2  if-else\Chapter2  if-else\bin\Debug\Chapter2  if-else.pdb
+C:\Users\ASUS\Desktop\C# code\Head First\Chapter2  if-else\Chapter2  if-else\obj\Debug\Chapter2  if-else.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\C# code\Head First\Chapter2  if-else\Chapter2  if-else\obj\Debug\Chapter2__if_else.Form1.resources
+C:\Users\ASUS\Desktop\C# code\Head First\Chapter2  if-else\Chapter2  if-else\obj\Debug\Chapter2__if_else.Properties.Resources.resources
+C:\Users\ASUS\Desktop\C# code\Head First\Chapter2  if-else\Chapter2  if-else\obj\Debug\Chapter2  if-else.csproj.GenerateResource.cache
+C:\Users\ASUS\Desktop\C# code\Head First\Chapter2  if-else\Chapter2  if-else\obj\Debug\Chapter2  if-else.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\C# code\Head First\Chapter2  if-else\Chapter2  if-else\obj\Debug\Chapter2  if-else.exe
+C:\Users\ASUS\Desktop\C# code\Head First\Chapter2  if-else\Chapter2  if-else\obj\Debug\Chapter2  if-else.pdb
