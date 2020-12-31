@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax 2 - Local JSON</title>
+</head>
+<body>
+    <div>
+        <button style="width:80px" type = "button" id = "button1">Get User</button>
+    </div><br/>
+    <div>
+        <button style="width:80px" type = "button" id = "button2">Get Users</button>
+    </div>
+
+    <h1>User</h1>
+    <div id = "user"></div><br/>
+
+    <h1>Users</h1>
+    <div id = "users"></div>
+    
+</body>
+
+<script>
+    document.getElementById("button1").addEventListener('click',loadUser)
+
+    document.getElementById("button2").addEventListener('click',loadUsers)
+
+    function loadUser()
+    {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET','user.json',true)
+
+        xhr.onload = function()
+        {
+            if(xhr.status == 200)
+            {
+                //xhr.responseText is a string 
+                //hence we need to parse it to the JSON
+                //format to use it like a JSON
+                var parsedjsonuserdata = JSON.parse(xhr.responseText)
+                //console.log(parsedjsonuserdata)
+
+                // var ul = document.createElement('ul')
+                // var li = document.createElement('li')
+
+                // li.appendChild(document.createTextNode(`${parsedjsonuserdata.name}:${parsedjsonuserdata.email}`))
+
+                // ul.appendChild(li)
+                // document.getElementById("user").appendChild(ul)
+
+                var output = ''
+                output += '<ul>'+
+                    '<li>ID: '+parsedjsonuserdata.id+'</li>'+
+                    '<li>Name: '+parsedjsonuserdata.name+'</li>'+
+                    '<li>Email: '+parsedjsonuserdata.email+'</li>'+ '</ul>'
+
+                document.getElementById("user").innerHTML = output
+
+                
+            }
+        }
+
+        xhr.onerror = function()
+        {
+            console.log('Request Error')
+        }
+
+        xhr.send()
+
+    }
+
+    function loadUsers()
+    {
+        var xhr = new XMLHttpRequest()
+        xhr.open('GET','users.json',true)
+
+
+        xhr.onload = function()
+        {
+            if(xhr.status == 200)
+            {
+                var usersdata = JSON.parse(xhr.responseText)
+                
+                var ul_main = document.createElement('ul')
+
+                for(let user of usersdata)
+                {
+                    var ul_sub = document.createElement('ul')
+                    
+                    for(let key of Object.keys(user))
+                    {
+                        var li  = document.createElement('li')
+                        li.appendChild(document.createTextNode(`${key} : ${user[key]}`))
+                        ul_sub.appendChild(li)
+                    }
+                   
+                    ul_main.appendChild(ul_sub)
+                }
+                document.getElementById("users").appendChild(ul_main)
+
+            }
+        }
+
+
+        xhr.send()
+    }
+
+
+</script>
+</html>
