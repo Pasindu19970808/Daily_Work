@@ -9,4 +9,15 @@ Major Special Sequences:
 
 Above sequences can be included inside a character class. e.g. [\s,.] matches a whitespace or ',' or '.' .
 
-<h2> Repeating Things </h2> 
+Repeating Things 
+
+Being able to match varying sets of characters is the first thing regular expression isn't already possible with the methods available on strings. You can also specify a certain portion of the Regular Expression must be repeated a certain number of times. 
+
+The first metacharacter for repeating things that we’ll look at is *. * doesn’t match the literal character '*'; instead, it specifies that the previous character can be matched zero or more times, instead of exactly once.
+
+Eg. ca*t will match 'ct'(0 as), 'cat'(1 a), 'caat' (2 a) and so forth
+
+Repetitions such as * are greefy hence the matching enginer tries to repeat it as many times as possible. 
+
+
+
