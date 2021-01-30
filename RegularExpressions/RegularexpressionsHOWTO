@@ -1,0 +1,12 @@
+Ref: https://docs.python.org/3/howto/regex.html
+Major Special Sequences:
+\d: Matches any decimal digit; this is equivalent to [0-9]
+\D: Matches any non-digit character; this is equivalent to [^0-9]
+\s: Matches any whitespace character;
+\S: Matches any non white space character;
+\w: Matches any alphanumeric character: equivalent to [a-zA-Z0-9_]
+\W: Matches any non-alphanumeric character: equivalent to [^a-zA-Z0-9_]
+
+Above sequences can be included inside a character class. e.g. [\s,.] matches a whitespace or ',' or '.' .
+
+<h2> Repeating Things </h2> 
