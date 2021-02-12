@@ -1,4 +1,6 @@
 //lookup mongodb
+// we will get all the instances of ProjectID in ProjectMaster, and the new field matchProj will be an array containing all the documents from ProjectMaster_copy containing the 
+// documents which match ProjectID of ProjectMaster
 db.ProjectMaster.aggregate([
     {
         $lookup:{
