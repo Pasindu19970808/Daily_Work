@@ -1,0 +1,12 @@
+//lookup mongodb
+db.ProjectMaster.aggregate([
+    {
+        $lookup:{
+            from:'ProjectMaster_copy',
+            localField:"ProjectID",
+            foreignField:"ProjectID",
+            as: "matchProj"
+            
+        }
+        
+    }])
