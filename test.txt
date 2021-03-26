@@ -1,0 +1,205 @@
+
+
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<!-- metadata -->
+		<title>expense claim</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="http://223.197.29.82/images/favicon.ico" type="image/x-icon" />
+		
+
+		<!-- stylesheets -->
+		<link type="text/css" rel="stylesheet" media="screen" href="http://223.197.29.82/styles/site_screen.css?id=1616721945" />
+		<link type="text/css" rel="stylesheet" media="screen" href="http://223.197.29.82/styles/bootstrap.min.css" />
+		<link type="text/css" rel="stylesheet" media="screen" href="http://223.197.29.82/styles/template.css" />
+		<link type="text/css" rel="stylesheet" media="screen" href="http://223.197.29.82/styles/datepicker.css" />
+
+		<!-- javascript -->
+		<script type="text/javascript" src="http://223.197.29.82/scripts/jquery1.7.js"></script>
+		<script type="text/javascript" src="http://223.197.29.82/scripts/bootstrap.js"></script>
+		<script type="text/javascript" src="http://223.197.29.82/scripts/bootstrap-datepicker.js"></script>
+		<script type="text/javascript" src="http://223.197.29.82/scripts/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="http://223.197.29.82/scripts/site.js?id=1616721945"></script>
+	</head>
+
+	<body id="list">
+
+	<div id="top-header">
+		<div class="logo">
+			<img src = "/images/helogo.png" alt = "logo" height="90px" style="height:90px">
+		</div>
+		<!-- site navigation -->
+		<div id="levelone" class="user-menu">
+			<div class="btn-group pull-right">
+				<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+					<i class="icon-user icon-white"></i>  Hettige Don Pasindu Smaranayake - 					<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu">
+
+						<!--li class="divider"></li-->
+					<!--li><a href="/user/edit-Pasindu.html">profile</a></li-->
+					<li><a href="/user/complocation.html">change company</a></li>
+					<li><a href="/user/password.html">change password</a></li>
+					<li><a href="/user/signout.html">sign out</a></li>
+				</ul>
+			</div>
+			<div class="btn-group pull-right lang-sel" style="display:none">
+				<a class="btn btn-primary dropdown-toggle" datas-toggle="dropdown" href="#">
+					<i class="icon-white"></i> - Eng 
+					<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu">
+					<li class="active"><a href="#" id="en" class="language">Eng</a></li>
+					<li class=""><a href="#" id="ch" class="language">中文</a></li>
+					<li class="divider"></li>
+					<li><a href="/user/edit-Pasindu.html">change company</a></li>
+				</ul>
+			</div>
+			
+
+			<div class="btn-group pull-right app-search" style="display:none">
+				<div>
+					<form id="frm-global-search"  method="POST" action="">
+						<div class="input-append">
+							<input class="span2" readonly="readonly" id="app-search" size="16" placeholder="search" maxlength="30" type="text"><button class="btn" type="button"><i class="icon-black icon-search"></i></button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+<!-- Second Level Menu -->
+		<div id="leveltwo" class="modules-menu">
+			<!--div class="short-menu"><img src="/images/icon-cube.png" title="IMS Menu"/></div-->
+			<div class="container pull-right align-menu menustrip">
+				<div class="navbar">
+					<div class="navbar-inner pull-right modules-menu-layer menustrip">
+						<ul class="nav nav2">
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="levelthree" class="module-group-menu"  >
+		</div><!-- Menu  Finish -->
+		
+	</div>
+<section class="alert alert-info"><p><i class=" icon-info-sign"></i> no records found</p></section>
+
+
+
+
+<!-- Modal Advance Search-->
+<div id="advanceSearch" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<form method="POST" id="frm_advance_search" action=""/>
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		<h3 id="myModalLabel">Advance Search</h3>
+	</div>
+	<div class="modal-body">
+		<div id="adv_control_0"><button type="button" title = "Add"class="btn ui-button-error more"><i class="icon-black icon-plus-sign"></i></button><select id="sel_adv_search_0" name="sel_adv_search[]" class="ui-buttons adv_select">
+<option value="ec_id">Ec_id</option>
+<option value="ec_ref">Ref</option>
+<option value="ec_our_ref">Old Ref</option>
+<option value="ec_date">Date</option>
+<option value="u_name">Staff Name</option>
+<option value="ec_name">Subject/title</option>
+<option value="(SELECT SUM(round((ecd_value*ecd_conversion_factor)+.0001,2)) FROM jt_expense_client_detail WHERE ec_id=ecd_ec_id) AS ec_total">Total</option>
+<option value="status">Status</option>
+</select><input name="txt_adv_search[]" id="txt_adv_search_0" placeholder=Search value="" type="text"></div>	</div>
+	<div class="modal-footer">
+		<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+		<button class="btn btn-danger" id="adv_reset">Reset</button>
+		<button class="btn btn-primary">Search</button>
+	</div>
+</form>
+</div>
+<div class="btn-group" style="display:none">
+  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+    Action
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <li><a href="/stone/purchase/list.html">P</a></li><!-- dropdown menu links -->
+    <li><a href="/stone/memoin/list.html">M</a></li><!-- dropdown menu links -->
+    <li><a href="/stone/purchase/list.html">P</a></li><!-- dropdown menu links -->
+  </ul>
+</div>
+
+
+<!-- Popup -->
+<div id="popup" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="popupLabel" aria-hidden="true">
+<form method="POST" id="frm_popup" action=""/>
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		<h3 id="popupLabel"></h3>
+	</div>
+	<div class="modal-body">
+	</div>
+	<div class="modal-footer"><div id="popup-status"></div>
+		<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+		<button id="btnpopup" class="btn btn-primary">Save</button>
+	</div>
+</form>
+</div>
+
+<img src="/images/helogo.png" id="loading-indicator" style="display:none;" />
+
+
+
+<div id="body-content" class="en">
+		<!-- list client -->
+		<section class="content">
+			<!-- signin form -->
+			<form id="listfrm" method="post" action="/account/expenseclaim/list.html">
+			<div id="page-title">
+				<div id="title-bar">
+					<span id="title">expense claim</span>
+					<!-- security check -->
+					<input type="hidden" id="csrf" name="csrf" value="ab7f9afab2bbf30f854e4a156dfbbe38a3ae5387" />					<div id="page-navs" class="pull-right">
+											</div>
+					<div class="pull-right">
+						<select id="sel_search" name="sel_search" class="ui-buttons" style="">
+<option value="ec_ref">Ref</option>
+<option value="ec_our_ref">Old Ref</option>
+<option value="ec_date">Date</option>
+<option value="u_name">Staff Name</option>
+<option value="ec_name">Subject/title</option>
+<option value="(SELECT SUM(round((ecd_value*ecd_conversion_factor)+.0001,2)) FROM jt_expense_client_detail WHERE ec_id=ecd_ec_id) AS ec_total">Total</option>
+<option value="status">Status</option>
+</select><div class="input-append"><input class="span2" name="txt_search" id="txt_search" placeholder=Search value="" type="text"><button  title="Search" class="btn form-search" type="button"><i class="icon-black icon-search"></i></button><button class="btn"  title="Advance" type="button" data-toggle="modal" data-target="#advanceSearch"><i class="icon-black icon-filter"></i></button></div>					</div>
+				</div>
+			</div>
+			<ul class="nav nav-tabs"><li class="active"><a href="/account/expenseclaim/list.html">expense</a></li><li class=""><a href="/account/expenseclaim/detaillist.html">expense detail</a></li></ul>			<input type="hidden" name="sort" id="sort" value="ec_ref desc"/>
+			</form>
+			
+					</section>
+<script type="text/javascript">
+$(".truncate").each( function() { var val = $(this).html();  val = (val.length>100) ? (val.substring(0,100)+'...') : val; $(this).html(val) });
+</script></div>
+		<!-- site footer -->
+		<footer class="footer">developed for IRESC
+			<!-- sitemap -->
+<!--			<ul id="sitemap">
+				<li><h4>quick links</h4></li>
+				<li><a href="">home</a></li>
+				<li><a href="">sign in</a></li>
+				<li><a href="">sign up</a></li>
+			</ul>
+-->
+			<!-- legal information -->
+<!--			<ul id="legal">
+				<li><h4>legal</h4></li>
+				<li><a href="">terms of use</a></li>
+				<li><a href="">privacy policy</a></li>
+			</ul>
+-->		</footer>
+
+
+
+	</body>
+</html>
+
+
+
